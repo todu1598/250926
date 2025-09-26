@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_Grid2.html</title>
+    <style>
+        .container {
+            display: grid;
+            /* 
+                숫자 비율대로 트랙의 크기 결정
+                1fr 1fr 1fr
+                균일하게 1:1:1 비율인 3개의 column을 만듬
+            */ 
+            /* 행의 배치 */
+            grid-template-rows: 1fr 50px 1fr;
+            /* 열의 배치 */
+            /* 
+                repeat(반복횟수, 반복값)
+                minmax(최소 100px, 최대 auto)
+                auto : 자동으로 늘어나게
+            */
+            grid-template-columns: repeat(3,minmax(100px,auto));
+        }
+        .item {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+</body>
+</html>
