@@ -113,7 +113,7 @@ body {
 	margin-bottom: 5px;
 }
 
-@media(max-width:1024px) and (min-width:787px) {
+@media(max-width:1024px) {
 	body {
 		background: none;
 	}
@@ -162,49 +162,45 @@ body {
 }
 
 @media(max-width:786px) {
+    body {
+		background: none;
+	}
 
 	.sidebar {
 		width: 100%;
-		height: 50px;
+		height: auto;
 	}
 
 	.sidebar .logo {
-		background-image: url('images/logo.png');
 		background-size: 100%;
 		width: 100px;
 		height: 30px;
-		display: block;
-		text-indent: -9999px;
 		margin: 10px;
 	}
 
-	.sidebar .sns-nb {
-		visibility: hidden;
+	.sidebar .gnb {
+		position: absolute;
+		top: 0;
+		right: 0;
 	}
 
-	.sidebar ul {
-		margin-bottom: 0;
-		margin-top: -50px;
+	.sidebar .sns-nb {
+		display: none;
+	}
+
+	.sidebar ul li {
+		float: left;
 	}
 
 	.sidebar ul li a {
 		padding: 10px 15px;
-		float: right;
 	}
 
 	.contents {
 		margin-top: 50px;
-		margin-left: 0;
-		gap: 0;
-		width: 100%;
 	}
 
 	.contents li {
-		box-shadow: none;
-		width: 100vw;
-	}
-
-	.contents li img {
 		width: 100%;
 	}
 }
